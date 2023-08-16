@@ -6,7 +6,13 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { links } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
+import ugaBusLogo from '../data/UGA BUS .0.jpg';
 
+const LogoImage = () =>{
+  return(
+    <img height='auto' width='90%' src={ugaBusLogo} />
+  )
+}
 const Sidebar = () => {
   const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
@@ -24,9 +30,10 @@ const Sidebar = () => {
       {activeMenu && (<>
         <div className='flex justify-between items-center'>
           <Link to='/' onClick={handleCloseSideBar}
-            className='items-center gap-3 ml-3 mt-4 flex text-xl 
-          font-extrabold tracking-tight dark:text-white text-slate-900 '>
-            <SiShopware /> <span>Shoppy</span>
+            className='items-center gap-3 ml-3 mt-4 text-xl 
+          font-extrabold tracking-tight dark:text-white text-slate-900'>
+            <LogoImage /> 
+            <span>Travel Data</span>
           </Link>
           <TooltipComponent content="menu" position="BottomCenter">
             <button

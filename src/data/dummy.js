@@ -1,8 +1,10 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import { FiShoppingBag,
+  //  FiEdit, 
+   FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
+// import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
@@ -21,7 +23,7 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
+// import product8 from './product8.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -507,14 +509,14 @@ export const links = [
       {
         name: 'kanban',
         icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
+      // },
+      // {
+      //   name: 'editor',
+      //   icon: <FiEdit />,
+      // },
+      // {
+      //   name: 'color-picker',
+      //   icon: <BiColorFill />,
       },
     ],
   },
@@ -625,9 +627,9 @@ export const earningData = [
   },
   {
     icon: <BsBoxSeam />,
-    amount: '4,396',
+    amount: '296',
     percentage: '+23%',
-    title: 'Products',
+    title: 'Routes',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
@@ -872,21 +874,21 @@ export const userProfileData = [
 
 export const ordersGrid = [
   {
-    headerText: 'Image',
-    template: gridOrderImage,
-    textAlign: 'Center',
+    field: 'OrderID',
+    headerText: 'Order ID',
     width: '120',
-  },
-  {
-    field: 'OrderItems',
-    headerText: 'Item',
-    width: '150',
-    editType: 'dropdownedit',
     textAlign: 'Center',
   },
   { field: 'CustomerName',
     headerText: 'Customer Name',
     width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Location',
+    headerText: 'Location',
+    width: '150',
+    editType: 'dropdownedit',
     textAlign: 'Center',
   },
   {
@@ -905,15 +907,8 @@ export const ordersGrid = [
     width: '120',
   },
   {
-    field: 'OrderID',
-    headerText: 'Order ID',
-    width: '120',
-    textAlign: 'Center',
-  },
-
-  {
-    field: 'Location',
-    headerText: 'Location',
+    field: 'Destination',
+    headerText: 'Destination',
     width: '150',
     textAlign: 'Center',
   },
@@ -2129,6 +2124,7 @@ export const ordersData = [
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
+    Destination: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2140,6 +2136,7 @@ export const ordersData = [
     TotalAmount: 56.34,
     OrderItems: 'Butter Scotch',
     Location: 'Delhi',
+    Destination: 'USA',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2151,6 +2148,7 @@ export const ordersData = [
     TotalAmount: 93.31,
     OrderItems: 'Candy Gucci',
     Location: 'New York',
+    Destination: 'Kampala',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2162,6 +2160,7 @@ export const ordersData = [
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
     Location: 'Germany',
+    Destination: 'Kampala',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2173,6 +2172,7 @@ export const ordersData = [
     TotalAmount: 23.99,
     OrderItems: 'Healthcare Erbology',
     Location: 'Spain',
+    Destination: 'Kampala',
     Status: 'rejected',
     StatusBg: 'red',
     ProductImage:
@@ -2184,6 +2184,7 @@ export const ordersData = [
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2195,6 +2196,7 @@ export const ordersData = [
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2206,6 +2208,7 @@ export const ordersData = [
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2217,6 +2220,7 @@ export const ordersData = [
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2228,6 +2232,7 @@ export const ordersData = [
     TotalAmount: 122.99,
     OrderItems: 'Watch',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2239,6 +2244,7 @@ export const ordersData = [
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
     Location: 'USA',
+    Destination: 'Kampala',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2250,6 +2256,7 @@ export const ordersData = [
     TotalAmount: 84.99,
     OrderItems: 'Pan Cake',
     Location: 'Delhi',
+    Destination: 'Kampala',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
